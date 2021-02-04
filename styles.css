@@ -1,0 +1,100 @@
+:root {
+  --font-family: sans-serif;
+  --heading-color: #06061b;
+  --border-color: #000000;
+  --border-width: 3px;
+  --box-bg: #989898;
+  --box-left-padding: 10px;
+  --box-right-padding: 10px;
+  --box-top-padding: 40px;
+  --box-bottom-padding: 10px;
+  --small-box-left-padding: 40px;
+  --small-box-right-padding: 40px;
+  --small-box-top-padding: 5px;
+  --small-box-bottom-padding: 5px;
+  --small-box-width: 60px;
+  --small-box-one-bg: #d89294;
+  --small-box-one-color: black;
+  --small-box-two-bg: #c53436;
+  --small-box-two-color: white;
+  --small-box-three-bg: #e1db91;
+  --small-box-three-color: black;
+  --small-box-font-size: 16px;
+  --text-color: #06061b;
+  --body-bg: #ffffff;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
+}
+
+h1 {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--heading-color);
+}
+
+body {
+  background: var(--body-bg);
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-item {
+  border: var(--border-width) solid var(--border-color);
+  background: var(--box-bg);
+  position: relative;
+  font-size: 14px;
+  padding: var(--box-top-padding) var(--box-right-padding)
+    var(--box-bottom-padding) var(--box-left-padding);
+  color: var(--text-color);
+}
+
+.small-box {
+  font-size: var(--small-box-font-size);
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: red;
+  padding: var(--small-box-top-padding) var(--small-box-right-padding)
+    var(--small-box-bottom-padding) var(--small-box-left-padding);
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 0 0 var(--border-width) var(--border-width);
+}
+
+.small-box-1 {
+  background: var(--small-box-one-bg);
+  color: var(--small-box-one-color);
+}
+
+.small-box-2 {
+  background: var(--small-box-two-bg);
+  color: var(--small-box-two-color);
+}
+
+.small-box-3 {
+  background: var(--small-box-three-bg);
+  color: var(--small-box-three-color);
+}
